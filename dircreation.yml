@@ -1,0 +1,8 @@
+---
+- name: Directory Creation
+  hosts: all
+  become: true
+  tasks:
+  - name: create a Directory
+    file: path=/home/Dir state=directory mode=777 owner=tnluser group=tnluser
+

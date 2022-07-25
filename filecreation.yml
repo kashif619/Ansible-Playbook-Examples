@@ -1,0 +1,8 @@
+---
+- name: File Creation
+  hosts: all
+  become: true
+  tasks:
+  - name: Create a file
+    file: path=/home/file.txt state=touch
+

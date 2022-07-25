@@ -1,0 +1,12 @@
+---
+- name: Zip all files in a directory
+  hosts: all
+  become: true
+  tasks:
+  - name: Zip all files in a directory
+    archive:
+     path:
+     - /home/
+     dest: /home/allfiles.zip
+     format: zip
+

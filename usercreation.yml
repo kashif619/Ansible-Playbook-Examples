@@ -1,0 +1,8 @@
+---
+- name: User Creation
+  hosts: all
+  become: yes
+  tasks: 
+  - name: Create a user
+    user: name=amit password=123456 groups=tnluser shell=/bin/bash
+

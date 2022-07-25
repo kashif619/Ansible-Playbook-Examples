@@ -1,0 +1,7 @@
+---
+- name: Replace instances of a string
+  hosts: all
+  become: true
+  tasks:
+  - name: replace String
+    replace: path=/home/file.txt regexp='folks' replace="user"

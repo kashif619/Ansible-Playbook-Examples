@@ -1,0 +1,13 @@
+---
+- name: Multiple Directory Creation
+  hosts: all
+  become: true
+  tasks:
+  - name: Create multiple Directory
+    file: path={{item}} state=directory
+    with_items:
+    - '/home/Dir1'
+    - '/home/Dir2'
+    - '/home/Dir3'
+
+ 

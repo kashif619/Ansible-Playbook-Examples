@@ -1,0 +1,8 @@
+---
+- name: Archive or Zip Files
+  hosts: all
+  become: yes
+  tasks:
+  - name: Zipping the File 
+    archive: path=/home/file.txt dest=/home/file.zip format=zip
+

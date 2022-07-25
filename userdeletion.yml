@@ -1,0 +1,7 @@
+---
+- name: Deletion User
+  hosts: all
+  become: true
+  tasks:
+  - name: Deletion a User
+    user: name=amit state=absent remove=yes force=yes

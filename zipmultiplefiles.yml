@@ -1,0 +1,13 @@
+---
+- name: Zip multiple files
+  hosts: all
+  become: true
+  tasks:
+  - name: Zipping Multiple Files
+    archive: 
+     path:
+     - '/home/file.txt'
+     - '/home/file1.txt'
+     dest: /home/files.zip
+     format: zip
+
